@@ -1,0 +1,512 @@
+html, body{
+	font: 15px/1.5 "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ', Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	padding:0;
+	margin:0;
+	background-color:#F5F5F5;
+	width:100%;
+	height: 100%;
+}
+
+.container{
+	width:80%;
+	margin:auto;
+	overflow: hidden;
+}
+
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+
+.lightgray{
+	padding:15px;
+	background:#efefef;
+	margin-top:10px;
+	margin-bottom:10px;
+	background-size: auto;
+}
+
+
+
+header{
+	background:#F5F5F5;
+	padding-top:0px;
+	min-height:70px;
+	border-top:#e7ba2f 3px solid;
+	
+}
+
+header #branding{
+	float:none;
+	text-align: center;
+}
+
+header #branding h1{
+	margin: 0;
+}
+
+
+.outer-wrapper {
+  width: 1400px;
+  margin: 0px auto;
+}
+
+.s-wrap {
+  width: 100%;
+  margin-bottom: 50px;
+  padding-bottom: 25%;
+  position: relative;
+  background-color: #efefe8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.s-wrap > input {
+  display: none;
+}
+.s-wrap .s-content {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+  font-size: 0;
+  list-style: none;
+  transition: transform 1s;
+}
+.s-wrap .s-item {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.s-wrap .s-item-1 {
+  background-image: url("../img/pic1.jpg");
+}
+.s-wrap .s-item-2 {
+  background-image: url("../img/pic4.jpg");
+}
+.s-wrap .s-item-3 {
+  background-image: url("../img/pic5.jpg");
+}
+
+.s-type-1 .s-control {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  transition-timing-function: ease-out;
+}
+.s-type-1 .s-control > label[class^="s-c-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background-color: #efefe8;
+  cursor: pointer;
+}
+.s-type-1 .s-nav label {
+  display: none;
+  position: absolute;
+  top: 50%;
+  padding: 5px 150px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.s-type-1 .s-nav label::before, .s-type-1 .s-nav label::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 24px;
+  background-color: #fff;
+}
+.s-type-1 .s-nav label::before {
+  margin-bottom: -12px;
+}
+.s-type-1 .s-nav label.left {
+  left: 20px;
+}
+.s-type-1 .s-nav label.left::before {
+  transform: rotate(45deg);
+}
+.s-type-1 .s-nav label.left::after {
+  transform: rotate(-45deg);
+}
+.s-type-1 .s-nav label.right {
+  right: 20px;
+}
+.s-type-1 .s-nav label.right::before {
+  transform: rotate(-45deg);
+}
+.s-type-1 .s-nav label.right::after {
+  transform: rotate(45deg);
+}
+.s-type-1 #s-1:checked ~ .s-content {
+  transform: translateX(0%);
+}
+.s-type-1 #s-1:checked ~ .s-control .s-c-1 {
+  background-color: #e7ba2f;
+}
+.s-type-1 #s-1:checked ~ .s-nav .s-nav-1 {
+  display: block;
+}
+.s-type-1 #s-2:checked ~ .s-content {
+  transform: translateX(-20%);
+}
+.s-type-1 #s-2:checked ~ .s-control .s-c-2 {
+  background-color: #e7ba2f;
+}
+.s-type-1 #s-2:checked ~ .s-nav .s-nav-2 {
+  display: block;
+	 
+}
+.s-type-1 #s-3:checked ~ .s-content {
+  transform: translateX(-40%);
+}
+.s-type-1 #s-3:checked ~ .s-control .s-c-3 {
+  background-color: #e7ba2f;
+}
+.s-type-1 #s-3:checked ~ .s-nav .s-nav-3 {
+  display: block;
+ 
+}
+
+
+.s-type-2 .s-content {
+  animation: slider-animation 2s ease-in-out infinite;
+}
+.s-type-2 .s-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slider-animation {
+  0%,
+    7% {
+    transform: translateX(0%);
+  }
+  12.5%,
+    19.5% {
+    transform: translateX(-20%);
+  }
+  25%,
+    32% {
+    transform: translateX(-40%);
+  }
+  37.5%,
+    44.5% {
+    transform: translateX(-60%);
+  }
+  50%,
+    57% {
+    transform: translateX(-80%);
+  }
+  62.5%,
+    69.5% {
+    transform: translateX(-60%);
+  }
+  75%,
+    82% {
+    transform: translateX(-40%);
+  }
+  87.5%,
+    94.5% {
+    transform: translateX(-20%);
+  }
+}
+
+
+.s-content h1{
+	z-index: 10;
+	text-align: center;
+	position: absolute;
+	padding-top: 115px;
+	padding-left: 300px;
+	color:#FFFFFF;
+}
+
+.s-content p{
+	z-index: 10;
+	text-align: center;
+	position: absolute;
+	padding-top: 200px;
+	padding-left: 380px;
+	color:#FFFFFF;
+}
+
+
+
+
+
+#showcase {
+	min-height:0px;
+	text-align: center;
+	color:#FFFFFF;
+    max-width: 100%; 
+    height: auto;
+	
+}
+
+#showcase h1{
+	margin-top:0px;
+	font-size:60px;
+	margin-bottom:10px;
+	
+}
+
+#showcase p{
+	font-size:18px;
+	font-family: "游ゴシック体", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ', Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+
+
+
+#sidebar{
+	margin-top:20px;
+}
+
+#sidebar.dummybanner{
+	float: left;
+	text-align: center;
+	width:30%;
+	padding:10px;
+}
+
+#sidebar .dummybanner img{
+	width:300px; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+#sidebar img{
+	width:125px; 
+    max-width: 30%; 
+    height: auto;
+	padding-bottom: 20px;
+}
+
+#sidebar a{
+	color: #4B4747;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+aside#sidebar{
+	float:right;
+	width:30%;
+	margin-top:50px;
+}
+.dummybanner{
+	text-align: center;
+	margin-top: 5px;
+
+}
+.recommend {
+	text-align: center;
+	font-size: 25px;
+	border-bottom:#030303 3px solid;
+}
+
+
+article#main-col{
+	float:left;
+	width:65%;
+	text-align: left;
+}
+
+#textcontent img{
+	width:150px; 
+    max-width: 100%; 
+    height: auto; 
+	float: left;
+	padding-right: 10px;
+}
+
+#textcontent{
+	margin-top: 60px;
+}
+
+#textcontent img{
+	width:220px; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+#textcontent h3{
+	font-size: 15px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding: 0px;
+	padding-top: 0px;
+	font-weight: bold;
+	
+	
+}
+
+#textcontent p{
+	color: #010000;
+}
+
+
+#textcontent .psize{
+	font-size: 10px; 
+	color:#999999;
+	margin-top: 50px;
+	
+}
+
+#textcontent a{
+	color: #4B4747;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: bold;
+ 
+}
+
+
+#textcontent a:hover{
+	color:#e7ba2f;
+}
+
+#textcontent p:hover{
+	color:#303030;
+}
+
+/* aside bar */
+
+#asidecontent img{
+	width:150px; 
+    max-width: 100%; 
+    height: auto; 
+	float: left;
+	padding-right: 10px;
+}
+
+#asidecontent{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#asidecontent img{
+	width:125px; 
+    max-width: 100%; 
+    height: auto; 
+	margin-top:5px;
+}
+
+#asidecontent h3{
+	font-size: 15px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding: 0px;
+	padding-top: 0px;
+	font-weight: bold;
+	
+	
+}
+
+#asidecontent p{
+	color: #010000;
+}
+
+
+#asidecontent .psize{
+	font-size: 11px; 
+	color:#999999;
+	margin-top: 0px;
+	padding-bottom: 5px;
+	
+}
+
+#asidecontent a{
+	color: #4B4747;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+ 
+}
+
+
+#asidecontent a:hover{
+	color:#e7ba2f;
+}
+
+#asidecontent p:hover{
+	color:#303030;
+}
+
+#button_1 .button_2 img{
+	
+	width:20px;  
+	float: right;
+	padding-left: 115px;
+}
+
+.button_2{
+	height: 45px;
+	background: #333333;
+	border:0;
+	padding-left: 180px;
+	padding-right: 10px;
+	color:#ffffff;
+	margin-left: 280px;
+	margin-top: 50px;
+	
+}
+
+
+#button_1 .button_2 a{
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 20px;
+	
+}
+
+
+
+#topp{
+	float:right;
+	display:inline;
+	padding: 0px 220px 0 250px;
+}
+
+#topp img{ 
+    max-width: 100%; 
+    height: auto;
+	display: none;
+}
+
+footer{
+	padding:1px;
+	margin-top:50px;
+	color:#ffffff;
+	background-color:#090909;
+	text-align: center;
+	
+}
+
+footer a{
+	text-decoration: none;
+	color:#ffffff;
+}
+
+a.back-to-top{
+	display: none;
+	width: 485px;
+	height: 100px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: url("../img/top-arrow-1.png") no-repeat center 43%;
+	text-indent: -9999px;
+	border-radius: 30px;
+}
+
